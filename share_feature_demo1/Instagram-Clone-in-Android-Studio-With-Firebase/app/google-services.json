@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "18896817581",
+    "project_id": "fitlog-feat-share",
+    "storage_bucket": "fitlog-feat-share.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18896817581:android:65a8874f07e74c595c2524",
+        "android_client_info": {
+          "package_name": "in.rjha.instagramclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFhTxzQWFCZ13UKDTsTmNUiOg6b4EwLRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
