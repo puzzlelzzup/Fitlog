@@ -1,4 +1,4 @@
-# ** 💪🔥 핏로그 Fitlog**
+# **💪🔥 핏로그 Fitlog**
 
 **mobile programming term project**
 
