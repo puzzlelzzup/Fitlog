@@ -25,11 +25,11 @@
   1) 일별 기록 기능 통합 및 사진, 이모티콘 등록 기능 추가
   2) 로그인 및 공유 캘린더 앱과 연결
   3) 등록한 데이터 바탕으로 시각화 정보 제공
-
--  Branch:
-  - 코드 관리를 위해 activate branch로 기능을 개발하고 있습니다. 개발 현황은 activate branch에서 확인할 수 있습니다.
-  - main : 기본 branch (최종 완성본)
-  - activate : 주요 기능 개발 및 업데이트 진행 중
+    
+- Branch:
+  - 코드 관리를 위해 activate branch로 개발하고 있습니다. 개발 현황은 activate branch로 확인할 수 있습니다.
+  - main : 기본 branch (초기 상태, 추후 완성본 추가 예정)
+  - activate : 현재 모든 개발 작업 진행 중
 
 # **🏋️ 주요 기능**
 
