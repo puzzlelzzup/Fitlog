@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="몸무게"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/weight_input"
+                android:hint="몸무게 입력"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="운동량"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/exercise_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/add_exercise_button"
+                android:text="+ 운동 추가"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 식단"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginTop="10dp">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="아침"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="칼로리"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+                    <EditText
+                        android:id="@+id/breakfast_menu_input"
+                        android:hint="메뉴명 입력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/breakfast_calorie_input"
+                        android:hint="칼로리 입력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textSize="18sp"/>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginTop="10dp">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="점심"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="칼로리"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+                    <EditText
+                        android:id="@+id/lunch_menu_input"
+                        android:hint="메뉴명 입력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/lunch_calorie_input"
+                        android:hint="칼로리 입력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textSize="18sp"/>
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginTop="10dp">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="저녁"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="칼로리"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+                    <EditText
+                        android:id="@+id/dinner_menu_input"
+                        android:hint="메뉴명 입력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/dinner_calorie_input"
+                        android:hint="칼로리 입력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textSize="18sp"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"/> >
+
+            <Button
+                android:id="@+id/save_button"
+                android:text="저장"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
