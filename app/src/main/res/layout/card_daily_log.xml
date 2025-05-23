@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:elevation="6dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 대표 이미지 -->
+        <ImageView
+            android:id="@+id/cardImg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 날짜 -->
+        <TextView
+            android:id="@+id/cardDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-05-05"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- 몸무게 -->
+        <TextView
+            android:id="@+id/cardWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몸무게: 65kg"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- 체지방률 -->
+        <TextView
+            android:id="@+id/cardFatRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="체지방: 18%"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- 운동 -->
+        <TextView
+            android:id="@+id/cardFitness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="운동: 스쿼트 15회 3세트, 플랭크 15회 3세트"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- 식단 요약 -->
+        <TextView
+            android:id="@+id/cardMeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아침: 샐러드(250kcal)\n점심: 닭가슴살(400kcal)\n저녁: 현미밥+국(500kcal)"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#60B5FF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#FFFA8D"
+        android:padding="30dp">
+
+        <!-- 사진 미리보기 -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_background"
+            android:elevation="20dp" />
+
+        <!-- 이미지 선택 버튼 -->
+        <Button
+            android:id="@+id/selectImgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 선택"
+            android:backgroundTint="#AFDDFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <!-- 몸무게 -->
+        <EditText
+            android:id="@+id/userWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="몸무게 (kg)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- 체지방률 -->
+        <EditText
+            android:id="@+id/userFatRatio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="체지방률 (%)"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- 운동 -->
+        <EditText
+            android:id="@+id/userFitness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="운동 루틴"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"/>
+
+        <!-- 식단 영역 -->
+        <TextView
+            android:text="🍽 아침"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/userBreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아침 식단 내용"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/KcalBreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="칼로리 (kcal)"
+            android:inputType="number"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"/>
+
+        <TextView
+            android:text="🍽 점심"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/userLunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="점심 식단 내용"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/KcalLunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="칼로리 (kcal)"
+            android:inputType="number"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            />
+
+        <TextView
+            android:text="🍽 저녁"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/userDinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="저녁 식단 내용"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/KcalDinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="칼로리 (kcal)"
+            android:inputType="number"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"/>
+
+        <!-- Upload 버튼 -->
+        <Button
+            android:id="@+id/uploadBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일지 등록하기"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#AFDDFF "
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>
