@@ -11,6 +11,7 @@ playServicesTasks = "18.3.0"
 firebaseAuth = "23.2.0"
 firebaseDatabase = "21.0.0"
 firebaseStorage = "21.0.1"
+firebaseFirestore = "25.1.4"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -24,6 +25,7 @@ play-services-tasks = { group = "com.google.android.gms", name = "play-services-
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

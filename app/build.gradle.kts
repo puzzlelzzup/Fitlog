@@ -47,6 +47,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.firebase.database)
     implementation(libs.firebase.storage)
+    implementation(libs.firebase.firestore)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

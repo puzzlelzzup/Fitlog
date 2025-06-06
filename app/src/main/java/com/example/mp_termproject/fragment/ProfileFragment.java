@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentActivity; // ViewPager2 어댑터용
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import com.example.mp_termproject.fragment.profiletabs.UserPostsGridFragment;
 import com.example.mp_termproject.fragment.profiletabs.SavedPostsFragment;
 import com.example.mp_termproject.fragment.profiletabs.LikedPostsFragment;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class ProfileFragment extends Fragment {
 
     private CircleImageView ivProfilePicture;
@@ -88,6 +91,20 @@ public class ProfileFragment extends Fragment {
             String userId = currentUser.getUid();
             mUserDatabase = FirebaseDatabase.getInstance().getReference("Users").child(userId);
             loadUserProfileData();
+
+            // Firestore에서 해당 유저의 게시물 수 조회
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("posts")
+                    .whereEqualTo("userId", userId)
+                    .get()
+                    .addOnSuccessListener(queryDocumentSnapshots -> {
+                        int count = queryDocumentSnapshots.size();
+                        tvPostCount.setText(String.valueOf(count));
+                    })
+                    .addOnFailureListener(e -> {
+                        tvPostCount.setText("0");
+                        Log.e("ProfileFragment", "게시물 수 로딩 실패", e);
+                    });
         } else {
             navigateToLogin();
         }

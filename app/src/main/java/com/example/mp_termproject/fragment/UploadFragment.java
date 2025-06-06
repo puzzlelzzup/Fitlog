@@ -23,6 +23,21 @@ import android.widget.Toast;
 import com.example.mp_termproject.R;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+// Firebase 관련
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+// Java 유틸리티
+import java.util.Map;
+import java.util.HashMap;
+import java.util.UUID;
+
+// 기타
 import java.io.IOException;
 
 public class UploadFragment extends Fragment {
@@ -135,7 +150,89 @@ public class UploadFragment extends Fragment {
         // 2. 업로드 성공 후 이미지 다운로드 URL 가져오기
         // 3. Firebase Realtime Database 또는 Firestore에 게시물 정보 (이미지 URL, content, tags, category, visibility, userId, timestamp 등) 저장
 
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+        String filename = "posts/" + UUID.randomUUID().toString() + ".jpg";
+        StorageReference imageRef = storageRef.child(filename);
+
+        final String finalCategory = selectedCategory;
+
+        imageRef.putFile(selectedImageUri)
+                .addOnSuccessListener(taskSnapshot -> {
+                    imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                        String imageUrl = uri.toString();
+                        uploadPostDataToFirestore(imageUrl, content, tags, finalCategory, visibility);
+                    });
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "이미지 업로드 실패: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+
         Toast.makeText(getContext(), "게시물 정보: \n내용: " + content + "\n태그: " + tags + "\n카테고리: " + selectedCategory + "\n공개범위: " + visibility, Toast.LENGTH_LONG).show();
         // 업로드 성공 후 현재 Fragment를 닫거나 다른 화면으로 이동하는 로직 추가 가능
+    }
+
+    private void uploadPostDataToFirestore(String imageUrl, String content, String tags,
+                                           String category, String visibility) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        Map<String, Object> post = new HashMap<>();
+        post.put("imageUrl", imageUrl);
+        post.put("content", content);
+        post.put("tags", tags);
+        post.put("category", category);
+        post.put("visibility", visibility);
+        post.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());
+        post.put("timestamp", FieldValue.serverTimestamp());
+
+        // 작성자 이름 저장
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            /*
+            String writerName = currentUser.getUid();
+            post.put("writer", writerName);
+            * */
+            String uid = currentUser.getUid();
+            db.collection("users").document(uid)
+                    .get()
+                    .addOnSuccessListener(documentSnapshot -> {
+                        if (documentSnapshot.exists()) {
+                            String writerName = documentSnapshot.getString("name");
+                            if (writerName != null) {
+                                post.put("writer", writerName);
+
+                                // 게시글 저장 로직
+                                db.collection("posts").add(post)
+                                        .addOnSuccessListener(documentReference -> {
+                                            Toast.makeText(getContext(), "게시물 업로드 성공", Toast.LENGTH_SHORT).show();
+                                        })
+                                        .addOnFailureListener(e -> {
+                                            Toast.makeText(getContext(), "게시물 업로드 실패: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        });
+                            } else {
+                                Toast.makeText(getContext(), "작성자 이름을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    })
+                    .addOnFailureListener(e -> {
+                        Toast.makeText(getContext(), "사용자 정보 로딩 실패", Toast.LENGTH_SHORT).show();
+                    });
+        } else {
+            Toast.makeText(getContext(), "로그인 상태가 아닙니다.", Toast.LENGTH_SHORT).show();
+        }
+
+        /*
+        }
+        db.collection("posts").add(post)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(getContext(), "게시물 업로드 성공", Toast.LENGTH_SHORT).show();
+                    requireActivity().getSupportFragmentManager().popBackStack();
+                })
+                .addOnFailureListener(e -> {
+                    if (getContext() != null) {
+                        Toast.makeText(getContext(), "게시물 업로드 실패: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+         */
     }
 }

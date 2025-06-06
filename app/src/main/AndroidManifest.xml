@@ -26,7 +26,7 @@
         <activity android:name=".SignupScreen" />
         <activity android:name=".ViewActivity" />
         <activity android:name=".EditActivity" />
-
+        <activity android:name=".PostDetailActivity" />
     </application>
 
 </manifest>
