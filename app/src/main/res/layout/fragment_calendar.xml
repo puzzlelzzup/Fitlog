@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ak.KalendarView
+        android:id="@+id/kalendar_view_in_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 오늘의 일정 섹션 -->
+    <TextView
+        android:id="@+id/today_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="오늘의 일정"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- 스케줄 카드 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/schedule_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 일정 추가 버튼 -->
+    <Button
+        android:id="@+id/add_schedule_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ 새 일정 추가하기"
+        android:layout_margin="16dp" />
+</LinearLayout>

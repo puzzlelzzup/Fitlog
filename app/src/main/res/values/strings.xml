@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mp_termproject</string>
+    <string-array name="visibility_options">
+        <item>전체 공개</item>
+        <item>친구에게만 공개</item>
+        <item>나만 보기</item>
+    </string-array>
+</resources>
