@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "215907408381",
+    "firebase_url": "https://termproject-432a4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "termproject-432a4",
+    "storage_bucket": "termproject-432a4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215907408381:android:a3dc3b3f5cd89fd54aa194",
+        "android_client_info": {
+          "package_name": "com.example.mp_termproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC__PVu6sq859-pIyYSjG_xvdlyIMiK__I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215907408381:android:0cd9d902323dc02a4aa194",
+        "android_client_info": {
+          "package_name": "kr.test.termprojecttest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC__PVu6sq859-pIyYSjG_xvdlyIMiK__I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

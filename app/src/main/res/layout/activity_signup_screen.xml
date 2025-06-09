@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:fitsSystemWindows="true">
+
+    <!-- 로고 -->
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitlog"
+        android:textColor="#FF5C77"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="28dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="닉네임을 입력해주세요"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이메일"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/editText_emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일을 입력해주세요"
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:background="@drawable/bt_signup"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <!-- 로그인 안내 텍스트 -->
+        <TextView
+            android:id="@+id/blogin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미 계정이 있으신가요?"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- 회원가입 클릭 가능한 텍스트 -->
+        <TextView
+            android:id="@+id/text_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:textColor="#FF5C77"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</LinearLayout>

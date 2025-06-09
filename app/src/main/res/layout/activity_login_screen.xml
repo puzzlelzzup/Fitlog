@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitlog"
+        android:textColor="#FF5C77"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#222222" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인하고 체계적인 다이어트 습관을 시작하세요"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/editText_emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일을 입력해주세요"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/ic_lock_password"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="24dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/blogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:background="@drawable/bt_login"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"
+        android:paddingVertical="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아직 회원이 아니신가요? "
+            android:textColor="#888888"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/bsignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textColor="#FF5C77"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

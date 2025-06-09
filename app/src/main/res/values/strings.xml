@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Fitlog</string>
+    <string-array name="visibility_options">
+        <item>전체 공개</item>
+        <item>친구에게만 공개</item>
+        <item>나만 보기</item>
+    </string-array>
+    <string-array name="activity_levels">
+        <item>매우 낮음 (거의 활동 없음)</item>
+        <item>낮음 (주 1-2회 운동)</item>
+        <item>보통 (주 3-5회 운동)</item>
+        <item>높음 (주 6-7회 운동)</item>
+    </string-array>
+</resources>

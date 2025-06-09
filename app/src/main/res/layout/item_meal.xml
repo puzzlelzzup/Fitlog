@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="12dp">
+
+    <!-- Food Name -->
+    <EditText
+        android:id="@+id/et_food_name"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="7"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_background"
+        android:hint="음식 이름"
+        android:paddingHorizontal="10dp"
+        android:textSize="14sp" />
+
+    <!-- Calories Input -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="4"
+        android:layout_marginEnd="8dp">
+
+        <EditText
+            android:id="@+id/et_calories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:hint="칼로리"
+            android:inputType="number"
+            android:paddingHorizontal="10dp"
+            android:paddingEnd="40dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="kcal"
+            android:textColor="#6B7280"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- Delete Button -->
+    <ImageButton
+        android:id="@+id/btn_delete_meal"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="삭제"
+        android:scaleType="centerInside" />
+
+</LinearLayout>

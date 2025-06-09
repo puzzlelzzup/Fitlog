@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9FB"
+    tools:context=".fragment.CalendarFragment">
+
+    <com.ak.KalendarView
+        android:id="@+id/kalendar_view_in_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/today_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="오늘의 기록"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/ll_daily_summary_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|top">
+
+            <TextView
+                android:id="@+id/tv_summary_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저장된 일정이 없습니다. 일정을 추가해 보세요."
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:padding="16dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

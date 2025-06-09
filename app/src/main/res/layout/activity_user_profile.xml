@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white"
+    tools:context=".UserProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile_picture_user"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                tools:src="@mipmap/ic_launcher_round"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_post_count_user"
+                    style="@style/ProfileCount"
+                    tools:text="2\n게시물"/>
+
+                <TextView
+                    android:id="@+id/tv_follower_count_user"
+                    style="@style/ProfileCount"
+                    tools:text="2\n팔로워"/>
+
+                <TextView
+                    android:id="@+id/tv_following_count_user"
+                    style="@style/ProfileCount"
+                    tools:text="2\n팔로잉"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_profile_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="사용자 이름"/>
+
+        <TextView
+            android:id="@+id/tv_profile_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="testemail@naver.com"/>
+
+        <TextView
+            android:id="@+id/tv_profile_user_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            tools:text="소개글이 여기에 표시됩니다."/>
+
+        <Button
+            android:id="@+id/btn_follow_user"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            tools:text="팔로우"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"/>
+
+    <FrameLayout
+        android:id="@+id/user_posts_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

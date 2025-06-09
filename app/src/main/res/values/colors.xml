@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_holiday">#FF2818</color>
+    <color name="blue">#2196F3</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="publish_button_color">#FF6B6B</color> // main color
+    <color name="logout_button_color">#2196F3</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="holo_blue_light">#33B5E5</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="protein_color">#F44336</color>
+    <color name="carbs_color">#4CAF50</color>
+    <color name="fat_color">#FFEB3B</color>
+
+
+
+
+
+
+</resources>

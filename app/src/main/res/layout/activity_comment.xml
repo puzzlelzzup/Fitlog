@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".CommentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_comment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="댓글"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_comment"
+        android:layout_above="@id/layout_comment_input"
+        tools:listitem="@layout/item_comment"/>
+
+    <LinearLayout
+        android:id="@+id/layout_comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_comment_input_area">
+
+        <EditText
+            android:id="@+id/et_comment_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="댓글 달기..."
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:background="@android:color/transparent"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/btn_post_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_send"
+            android:scaleType="center"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="댓글 게시" />
+    </LinearLayout>
+</RelativeLayout>

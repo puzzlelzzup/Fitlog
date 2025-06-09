@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".EditProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프로필 편집"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="저장"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF5C77"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_picture_edit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher_round"/>
+
+        <TextView
+            android:id="@+id/tv_change_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 변경"
+            android:textColor="#FF5C77"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginHorizontal="16dp"/>
+
+    <EditText
+        android:id="@+id/et_bio_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="소개글을 입력해주세요..."
+        android:minLines="3"
+        android:gravity="top"
+        android:padding="16dp"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>
