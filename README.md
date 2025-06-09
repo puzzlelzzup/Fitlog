@@ -5,7 +5,10 @@
 **Team Member: DongYeon Kim / SeongEun Kim / KyeongMin Nam / DongHyun Lee**
 
 📝 More about project
-https://fan-cornflower-ed9.notion.site/MP_Team6_TermProject-Fitlog-20db186c644e8008b5d2ee3c04bf5e16?source=copy_link
+
+**[Technical Documentation]:** https://fan-cornflower-ed9.notion.site/MP_Team6_TermProject-Fitlog-20db186c644e8008b5d2ee3c04bf5e16?source=copy_link
+
+**[Running App(YouTube)]:** https://youtu.be/TXfNFGaVhZ8?si=xvTNXFukfZoQXQGe
 
 ## **📜 Contents**
 
